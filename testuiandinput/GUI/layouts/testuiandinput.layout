@@ -12,7 +12,7 @@ FrameWidgetClass testuiandinput {
  {
   PanelWidgetClass Background {
    visible 1
-   color 0 0 0 0.65
+   color 0.1569 0.6235 0.2745 1
    position 0 0
    size 1 400
    hexactpos 1
@@ -33,17 +33,17 @@ FrameWidgetClass testuiandinput {
    style rover_sim_colorable
    {
     TextWidgetClass title_text {
-     position 0 0
-     size 1.01654 1
+     position -0.06202 0.06528
+     size 479.81201 46
      halign center_ref
      valign center_ref
      hexactpos 0
      vexactpos 0
-     hexactsize 0
-     vexactsize 0
+     hexactsize 1
+     vexactsize 1
      style Normal
      text "Base Item Counter"
-     font "gui/fonts/Metron48"
+     font "gui/fonts/etelkatextpro28"
      "text offset" 30 0
      "text halign" center
      "text valign" center
@@ -53,8 +53,8 @@ FrameWidgetClass testuiandinput {
   TextWidgetClass TextCenter {
    clipchildren 0
    ignorepointer 1
-   position -0.00199 -0.07596
-   size 0.5 0.3
+   position -0.00199 -0.15039
+   size 0.5 0.15115
    halign center_ref
    valign center_ref
    hexactpos 0
@@ -63,11 +63,12 @@ FrameWidgetClass testuiandinput {
    vexactsize 0
    priority 2
    text "Press Count"
+   font "gui/fonts/metron-bold22"
    "text halign" center
    "text valign" center
    {
     ButtonWidgetClass btn_cancel {
-     position 69.5023 -145.505
+     position 254.73999 -185.19901
      size 160 40
      halign left_ref
      valign bottom_ref
@@ -78,7 +79,7 @@ FrameWidgetClass testuiandinput {
      text "#Quit"
     }
     ButtonWidgetClass btn_enable {
-     position 262.61902 -145.504
+     position 252.696 -186.85201
      size 160 40
      halign right_ref
      valign bottom_ref
@@ -87,6 +88,22 @@ FrameWidgetClass testuiandinput {
      hexactsize 1
      vexactsize 1
      text "#Count"
+     {
+      TextWidgetClass MoreInfo {
+       clipchildren 0
+       ignorepointer 1
+       position 120.84901 -103.356
+       size 299.39297 48
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       text "More info here"
+       font "gui/fonts/metron-italic16"
+       "text color" 0.502 0 0 1
+       "text halign" center
+      }
+     }
     }
    }
   }

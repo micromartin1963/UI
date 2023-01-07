@@ -11,7 +11,7 @@ class CfgMods
 {
 	class TestUiAndInput
 	{
-		dir = "Trader";
+		dir = "TestUiAndInput";
 		picture = "";
 		action = "";
 		hideName = 1;

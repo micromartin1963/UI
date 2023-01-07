@@ -1,102 +1,94 @@
-FrameWidgetClass testuiandinput
-{
-	visible 0
-	color 0 0 0 0
-	position 0 0
-	size 650 450
-	halign center_ref
-	valign center_ref
-	hexactpos 0
-	vexactpos 0
-	hexactsize 1
-	vexactsize 1
-	style EditorPanel
-
-	{
-        PanelWidgetClass Background
-        {
-			visible 1
-			color 0 0 0 0.65
-			position 0 0
-			size 650 450
-			hexactpos 1
-			vexactpos 1
-			hexactsize 0
-			vexactsize 1
-			style rover_sim_colorable
-        }
-
-		PanelWidgetClass title_wrapper
-		{
-			visible 1
-			color 0 0 0 0.7843
-			position 0 0
-			size 1 50
-			hexactpos 1
-			vexactpos 1
-			hexactsize 0
-			vexactsize 1
-			style rover_sim_colorable
-
-			{
-				TextWidgetClass title_text
-				{
-					position 0 0
-					size 1 1
-					halign center_ref
-					valign center_ref
-					hexactpos 0
-					vexactpos 0
-					hexactsize 0
-					vexactsize 0
-					style Normal
-					text "Anti Camping Mode"
-					font "gui/fonts/Metron48"
-					"text offset" 30 0
-				}
-			}
-		}
-		
-
-	
-		
-		ButtonWidgetClass btn_cancel
-        {
-            position 5 5
-            size 160 40
-            halign left_ref
-            valign bottom_ref
-            hexactpos 1
-            vexactpos 1
-            hexactsize 1
-            vexactsize 1
-            text "#cancel"
-        }
-		
-		ButtonWidgetClass btn_enable
-        {
-            position 170 5
-            size 160 40
-            halign right_ref
-            valign bottom_ref
-            hexactpos 1
-            vexactpos 1
-            hexactsize 1
-            vexactsize 1
-            text "#enable"
-        }
-		
-		ButtonWidgetClass btn_disable
-        {
-            position 5 5
-            size 160 40
-            halign right_ref
-            valign bottom_ref
-            hexactpos 1
-            vexactpos 1
-            hexactsize 1
-            vexactsize 1
-            text "#disable"
-        }
-	}
+FrameWidgetClass testuiandinput {
+ visible 1
+ color 0 0 0 0
+ position -0.01214 -0.00459
+ size 600 400
+ halign center_ref
+ valign center_ref
+ hexactpos 0
+ vexactpos 0
+ hexactsize 1
+ vexactsize 1
+ {
+  PanelWidgetClass Background {
+   visible 1
+   color 0 0 0 0.65
+   position 0 0
+   size 1 400
+   hexactpos 1
+   vexactpos 1
+   hexactsize 0
+   vexactsize 1
+   style rover_sim_colorable
+  }
+  PanelWidgetClass title_wrapper {
+   visible 1
+   color 0 0 0 0.7843
+   position -2 0
+   size 1 76
+   hexactpos 1
+   vexactpos 1
+   hexactsize 0
+   vexactsize 1
+   style rover_sim_colorable
+   {
+    TextWidgetClass title_text {
+     position 0 0
+     size 1.01654 1
+     halign center_ref
+     valign center_ref
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     style Normal
+     text "Base Item Counter"
+     font "gui/fonts/Metron48"
+     "text offset" 30 0
+     "text halign" center
+     "text valign" center
+    }
+   }
+  }
+  TextWidgetClass TextCenter {
+   clipchildren 0
+   ignorepointer 1
+   position -0.00199 -0.07596
+   size 0.5 0.3
+   halign center_ref
+   valign center_ref
+   hexactpos 0
+   vexactpos 0
+   hexactsize 0
+   vexactsize 0
+   priority 2
+   text "Press Count"
+   "text halign" center
+   "text valign" center
+   {
+    ButtonWidgetClass btn_cancel {
+     position 69.5023 -145.505
+     size 160 40
+     halign left_ref
+     valign bottom_ref
+     hexactpos 1
+     vexactpos 1
+     hexactsize 1
+     vexactsize 1
+     text "#Quit"
+    }
+    ButtonWidgetClass btn_enable {
+     position 262.61902 -145.504
+     size 160 40
+     halign right_ref
+     valign bottom_ref
+     hexactpos 1
+     vexactpos 1
+     hexactsize 1
+     vexactsize 1
+     text "#Count"
+    }
+   }
+  }
+ }
 }

@@ -1,6 +1,7 @@
 class testuiandinput extends UIScriptedMenu
 {
 
+
     private bool m_Initialized = false;
     private bool m_IsMenuOpen;
 
@@ -8,6 +9,7 @@ class testuiandinput extends UIScriptedMenu
     ButtonWidget m_Btnenable;
 	ButtonWidget m_Btndisable;
 	ButtonWidget m_BtnCancel;
+	protected TextWidget m_TextCenter;
 
 
 
@@ -37,6 +39,7 @@ class testuiandinput extends UIScriptedMenu
     {
 
 	layoutRoot = GetGame().GetWorkspace().CreateWidgets( "TestUiAndInput/GUI/layouts/testuiandinput.layout" );
+	m_TextCenter = TextWidget.Cast(layoutRoot.FindAnyWidget("TextCenter"));
         m_Btnenable = ButtonWidget.Cast( layoutRoot.FindAnyWidget( "btn_enable" ) );
 	m_Btndisable = ButtonWidget.Cast( layoutRoot.FindAnyWidget( "btn_disable" ) );
 	m_BtnCancel = ButtonWidget.Cast( layoutRoot.FindAnyWidget( "btn_cancel" ) );
@@ -67,7 +70,8 @@ class testuiandinput extends UIScriptedMenu
 	{
 		super.OnShow();
 
-//		//PPEffects.SetBlurMenu(0.5);
+		//PPEffects.SetBlurMenu(0.5);
+		
 
 		GetGame().GetInput().ChangeGameFocus(1);
 
@@ -96,13 +100,13 @@ class testuiandinput extends UIScriptedMenu
 		
 		if ( w == m_Btnenable )
 		{
-		Print("Pressed enable");
-
+		m_TextCenter.SetText(CountItems().ToString());
+		//m_TextCenter.SetText("Items Counted =");
 		}
 		
 		if ( w == m_Btndisable )
 		{
-
+		m_TextCenter.SetText("disable");
 			Print("Pressed disable");
 			return true;
 		}
@@ -119,12 +123,7 @@ class testuiandinput extends UIScriptedMenu
 		return false;
 	}
 	
-//	override bool OnChange( Widget w, int x, int y, bool finished )
-//	{
-//		super.OnChange(w, x, y, finished);
-//
-//
-//	}
+
 	
 
 
@@ -135,6 +134,69 @@ class testuiandinput extends UIScriptedMenu
        // else
         //    PPEffects.SetBlurMenu( 0 );
     }
+
+
+	
+	int CountItems() 
+	{
+	int items = 0;
+	int itemsTotal = 0;
+	int builderitems = 0;
+	string tmp ;
+        Building building;
+	ItemBase m_items;
+	Inventory_Base IvItems;
+	Container_Base ContainerItems;
+	CargoBase cargo; 
+	EntityAI Ent_Ai;
+
+
+
+		ref array<Object> objects = new array<Object>;
+
+		GetGame().GetObjectsAtPosition3D(GetGame().GetPlayer().GetPosition(), 15, objects, NULL);
+		for (int i = 0; i < objects.Count(); i++) 
+		{
+
+			//Class.CastTo(ContainerItems, objects.Get(i));
+			//if(!ContainerItems)
+			//{
+			//items++;
+			//}
+
+			Class.CastTo(m_items, objects.Get(i));
+			if(m_items)
+			{
+			items = m_items.ListAllMyItems(m_items);
+			itemsTotal = itemsTotal + items;
+			//items++;
+			}
+		
+
+			//Class.CastTo(IvItems, objects.Get(i));
+			//if(IvItems)
+			//{
+			//items++;
+			//}
+
+			//Class.CastTo(Ent_Ai, objects.Get(i));
+			//if(Ent_Ai)
+			//{
+			//items++;
+			//}
+
+
+		}
+
+		return itemsTotal;
+
+		
+	}
+
+
+
+
+
 
 
 }

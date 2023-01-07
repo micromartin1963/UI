@@ -3,32 +3,12 @@ modded class MissionGameplay
 
     private ref testuiandinput instance;
 
-//	override void OnInit()
-//  	{
-
-//		super.OnInit();
-//	}
-	
-//	override void TickScheduler(float timeslice)
-//	{
-//		super.TickScheduler(timeslice);
-			
-		
-//	}
 
 
 
 
-//    override void OnKeyPress(int key) 
-//    {
-//		if ( key == KeyCode.KC_G )
-//		{	
-//		Print("Pressed G xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");	
-//		}
 
-//Print("In OnKey but not picking up G xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
-//        super.OnKeyPress(key);
-//    }
+
 
 
 

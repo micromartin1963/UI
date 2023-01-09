@@ -20,6 +20,71 @@ FrameWidgetClass testuiandinput {
    hexactsize 0
    vexactsize 1
    style rover_sim_colorable
+   {
+    TextWidgetClass Range01 {
+     ignorepointer 1
+     position 34.0018 264.77203
+     size 76.11639 48
+     hexactpos 1
+     vexactpos 1
+     hexactsize 1
+     vexactsize 1
+     text "15mtr"
+     font "gui/fonts/metron-bolditalic14"
+     "text halign" center
+     "text valign" center
+    }
+    TextWidgetClass Range02 {
+     ignorepointer 1
+     position 228.08101 265.04202
+     size 72.80861 48
+     hexactpos 1
+     vexactpos 1
+     hexactsize 1
+     vexactsize 1
+     text "25mtr"
+     font "gui/fonts/metron-bolditalic14"
+     "text halign" center
+     "text valign" center
+    }
+    TextWidgetClass Range03 {
+     ignorepointer 1
+     position 404.508 265.11902
+     size 64.539 48
+     hexactpos 1
+     vexactpos 1
+     hexactsize 1
+     vexactsize 1
+     text "35mtr"
+     font "gui/fonts/metron-bolditalic14"
+     "text halign" center
+     "text valign" center
+    }
+    CheckBoxWidgetClass CheckBox35mtr {
+     position 510.66299 263.54202
+     size 48 48
+     hexactpos 1
+     vexactpos 1
+     hexactsize 1
+     vexactsize 1
+    }
+    CheckBoxWidgetClass CheckBox25mtr {
+     position 332.54202 262.35199
+     size 48 48
+     hexactpos 1
+     vexactpos 1
+     hexactsize 1
+     vexactsize 1
+    }
+    CheckBoxWidgetClass CheckBox15mtr {
+     position 148.30501 263.737
+     size 48 48
+     hexactpos 1
+     vexactpos 1
+     hexactsize 1
+     vexactsize 1
+    }
+   }
   }
   PanelWidgetClass title_wrapper {
    visible 1
@@ -53,7 +118,7 @@ FrameWidgetClass testuiandinput {
   TextWidgetClass TextCenter {
    clipchildren 0
    ignorepointer 1
-   position -0.00199 -0.15039
+   position -0.00475 -0.21655
    size 0.5 0.15115
    halign center_ref
    valign center_ref
@@ -68,7 +133,7 @@ FrameWidgetClass testuiandinput {
    "text valign" center
    {
     ButtonWidgetClass btn_cancel {
-     position 254.73999 -185.19901
+     position 258.048 -223.239
      size 160 40
      halign left_ref
      valign bottom_ref
@@ -79,7 +144,7 @@ FrameWidgetClass testuiandinput {
      text "#Quit"
     }
     ButtonWidgetClass btn_enable {
-     position 252.696 -186.85201
+     position 251.04199 -224.892
      size 160 40
      halign right_ref
      valign bottom_ref
@@ -92,16 +157,17 @@ FrameWidgetClass testuiandinput {
       TextWidgetClass MoreInfo {
        clipchildren 0
        ignorepointer 1
-       position 120.84901 -103.356
+       position 115.88701 -184.397
        size 299.39297 48
        hexactpos 1
        vexactpos 1
        hexactsize 1
        vexactsize 1
-       text "More info here"
+       text "info will be here"
        font "gui/fonts/metron-italic16"
        "text color" 0.502 0 0 1
        "text halign" center
+       "text valign" center
       }
      }
     }
